@@ -2,111 +2,100 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Home work #5</title>
-	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>DWArF</title>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Langar" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Langar&family=Pacifico" rel="stylesheet">
+
+	<link rel="stylesheet/less" href="./css/style.less">
 </head>
 <body>
-	<header class="header">
-		<div class="container header__container">
+	<header>
+		<section class="header">
 			<div class="logo">
-				<img src="logo.png" alt="" class="menu__icon">
-				<img class="logo__icon" src="logo.png">
-				<div class="logo__title">DWArF</div>
+				<img class="logo__icon" src="./img/logo.png" alt="Logo DWArF">
+				<p class="logo__title">DWArF</p>
 			</div>
-			<nav class="menu">
-				<ul class="menu__items">
-					<li class="menu__item">
-						<a href="#project" class="menu__link">
-							Проекты
-						</a>
+			<div class="menu">
+				<ul class="menu__item">
+					<li class="menu__item__list"><a href="#">Проекты</a>
+						<ul class="new-list">
+							<li><a href="#">sword</a></li>
+							<li><a href="#">axe</a></li>
+							<li><a href="#">molot</a></li>
+							<li><a href="#">shield</a></li>
+						</ul>
 					</li>
-					<li class="menu__item">
-						<a href="#in_work" class="menu__link">
-							В работе
-						</a>
+					<li class="menu__item__list"><a href="#in_work">В работе</a>
+						<ul class="new-list">
+							<li><a href="#">sword</a></li>
+							<li><a href="#">axe</a></li>
+							<li><a href="#">molot</a></li>
+							<li><a href="#">shield</a></li>
+						</ul>
 					</li>
-					<li class="menu__item">
-						<a href="#helps" class="menu__link">
-							Наши помошники
-						</a>
+					<li class="menu__item__list"><a href="#helps">Наши помошники</a>
+						<ul class="new-list">
+							<li><a href="#">sword</a></li>
+							<li><a href="#">axe</a></li>
+							<li><a href="#">molot</a></li>
+							<li><a href="#">shield</a></li>
+						</ul>
 					</li>
-					<li class="menu__item menu__item_last">
-						<a href="#about_me" class="menu__link">
-							О нас
-						</a>
-					</li>
+					<li class="menu__item__list"><a href="#about_me">О нас</a></li>
 				</ul>
-			</nav>
-			<a href="#" class="btn btn_primary">
-				Проект
-			</a>
-		</div>
+				<button class="btn">Заказать проект</button>
+			</div>
+		</section>
 	</header>
-	<main class="main">
-		<img src="homework.png" alt="" class="main__image">
-		<div class="box__title">
-			Доброго времени суток.
-			Крафт-мастерская Dark Weapon (DWArF) любезно распахивает свои гаражные ворота навстречу новым проектам.
-			Заказы на данный момент не принимаются, мы только учимся, но в скором времени все будет!
-			Работаем в основном по дереву, осваиваем металл, пластик.
-		</div>
-		<div class="title_project">
-			<h2 id="project">Проекты</h2>
-		</div>
-		<div class="box">
-			<div class="box_a">
-				<img class="image__profile" src="aaa.png" alt="">
+	<main>
+		<section>
+			<div class="promo">
+				<h1 class="promo__title">welcome to our cosplay world</h1>
+				<p class="promo__text">Здесь мы раскажем<br> и покажем все о нашей группе,<br> расскажем о косплее в мире</p>
 			</div>
-			<div class="box_b">
-				<img class="image__profile" src="bbb.png" alt="">
+		</section>
+		<section>
+			<div class="steps">
+				<h2>Почему косплей интенсивно развивается?</h2>
+				<div class="grid-container">
+					<div class="color-1"></div>
+					<div class="color-2"></div>
+					<div class="color-3"></div>
+					<div class="color-4"></div>
+					<div class="color-5"></div>
+					<div class="color-6"></div>
+					<div class="color-7"></div>
+					<div class="color-8"></div>
+					<div class="color-9"></div>
+					<div class="color-10"></div>
+					<div class="color-11"></div>
+					<div class="color-12"></div>
+					<div class="color-13"></div>
+					<div class="color-14"></div>
+					<div class="color-15"></div>
+				</div>
 			</div>
-			<div class="box_c">
-				<img class="image__profile" src="ccc.png" alt="">
-			</div>
-			<div class="box_d">
-				<img class="image__profile" src="ddd.png" alt="">
-			</div>
-			<div class="box_e">
-				<img class="image__profile" src="eee.png" alt="">
-			</div>
-			<div class="box_f">
-				<img class="image__profile" src="fff.png" alt="">
-			</div>
-		</div>
-		<div class="in_work">
-			<h2 id="in_work">В работе</h2>
+		</section>
+		<section>
+			<h2>Завершенные проекты</h2>
 			<div>
-				В работе пока проектов нет, но мы скоро вернемся, как только оборудоем новое место для работы, оставайтесь на связи
+				img	
 			</div>
-		</div>
-		<div class="help">
-			<h2 id="helps">Наши помошники</h2>
-		</div>
-		<div class="tool">
-			<div class="tool_a">
-				<img class="image__profile" src="multi.png" alt="">
-			</div>
-			<div class="tool_b">
-				<img class="image__profile" src="milling_cutter.png" alt="">
-			</div>
-			<div class="tool_c">
-				<img class="image__profile" src="engraver.png" alt="">
-			</div>
-		</div>
-		<div class="tools_help">
-			<h2>Мы можем перенести персонажа в реальный мир)<h2>
-		</div>
+		</section>
+		<!-- <section class="companies">
+			<h2>Комании для работы которые мы выбираем</h2>
+			<div></div>
+			<div></div>
+		</section> -->
 	</main>
 	<footer>
-		<div class="basement">
-			<h2 id="about_me">Контакты</h2>
-			<h3>8(915)123-45-67 machina91@mail.ru<h3>
-			<h4>© 2016 DWArF</h4>
-			
-		</div>
+
 	</footer>
+
+
+	<script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
 </body>
 </html>
