@@ -35,6 +35,13 @@ section {
     margin: auto;
 }
 
+h2 {
+    text-align: center;
+    font-family: @fontRussianPacifico;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -183,7 +190,7 @@ section {
     margin-top: 50px;
     padding-left: 100px;
     height: 450px;
-    background-image: url(/img/sylvana4.jpg);
+    background-image: url(/img/sylvana.jpg);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -252,12 +259,6 @@ section {
 
     margin-top: 50px;
     margin-bottom: 100px;
-
-    & h2 {
-        font-family: @fontRussianPacifico;
-        font-size: 2rem;
-        letter-spacing: 1px;
-    }
 }
 
 .grid-container {
@@ -268,69 +269,350 @@ section {
     grid-row-gap: 1em;
 }
 
+.color-1,
+.color-2,
+.color-3,
+.color-4,
+.color-5,
+.color-6,
+.color-7,
+.color-8,
+.color-9,
+.color-10,
+.color-11,
+.color-12,
+.color-13,
+.color-14,
+.color-15 {
+    background-position: center;
+    background-size: cover;
+}
+
 .color-1 {
-    background-color: rgb(255, 6, 6);
+    background-image: url(/img/san-diego.jpg);
     grid-column-start: 1;
     grid-column-end: 4;
 }
 .color-2 {
-    background-color: rgb(0, 0, 255);
+    background-color: rgb(126, 126, 42);
+    background-image: url(/img/dremel.png);
 }
 .color-3 {
-    background-color: rgb(0, 255, 0);
+    background-image: url(/img/gilgamesh-2.png);
     grid-column-start: 5;
     grid-row-start: 1;
     grid-row-end: 3;
 }
 .color-4 {
-    background-color: rgb(255, 251, 0);
+    background-image: url(/img/cosplay.jpg);
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 4;
 }
 .color-5 {
-    background-color: rgb(0, 195, 255);
+    background-image: url(/img/sylvana-2.jpg);
 }
 .color-6 {
-    background-color: rgb(255, 0, 221);
+    background-image: url(/img/axe.jpg);
 }
 .color-7 {
-    background-color: rgb(112, 180, 24);
+    background-image: url(/img/warcraft.jpg);
 }
 .color-8 {
-    background-color: rgb(207, 114, 38);
+    background-image: url(/img/warhammer40k.jpg);
     grid-column-start: 1;
     grid-row-start: 3;
     grid-row-end: 5;
 }
 .color-9 {
-    background-color: rgb(80, 24, 170);
+    background-image: url(/img/igromir.jpg);
     grid-row-start: 4;
     grid-column-start: 2;
     grid-column-end: 5;
 }
-.color-10 {background-color: rgb(0, 0, 0);}
+.color-10 {
+    background-image: url(/img/eva-foam.jpg);
+}
 .color-11 {
-    background-color: rgb(226, 215, 215);
+    background-image: url(/img/worbla.jpg);
     grid-row-start: 3;
     grid-column-start: 4;
     grid-column-end: 6;
 }
 .color-12 {
-    background-color: rgb(100, 21, 81);
+    background-image: url(/img/kamui.jpg);
     grid-row-start: 4;
     grid-row-end: 6;
     grid-column-start: 5;
 }
 .color-13 {
-    background-color: rgb(127, 145, 98);
+    background-image: url(/img/master.jpg);
     grid-row-start: 5;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 .color-14 {
-    background-color: rgb(51, 183, 216);
+    background-image: url(/img/pushka.jpg);
 }
 .color-15 {
-    background-color: rgb(50, 10, 158);
+    background-image: url(/img/svetilnik.jpg);
+}
+
+.color-1:hover::before,
+.color-2:hover::before,
+.color-3:hover::before,
+.color-4:hover::before,
+.color-5:hover::before,
+.color-6:hover::before,
+.color-7:hover::before,
+.color-8:hover::before,
+.color-9:hover::before,
+.color-10:hover::before,
+.color-11:hover::before,
+.color-12:hover::before,
+.color-13:hover::before,
+.color-14:hover::before,
+.color-15:hover::before {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1.5rem;
+    font-family: @fontRussianPacifico;
+    text-align: center;
+    
+}
+
+.color-1:hover::before {
+    content: "Самый крупный фестиваль в мире проходит в Америке Comic-Con, там можно увидеть много разнообразного косплея, люди заранее готовятся к такому празднику в мире комиксов";
+}
+.color-2:hover::before {
+    font-size: 1.2rem;
+    content: "Возможность использовать разнообразный иструмент для создания потрясающих костюмов";
+}
+.color-3:hover::before {
+    content: "Даже не опытные товарищи могут сделать такой вот костюм и куска пластмассы";
+}
+.color-4:hover::before {
+    content: "Люди хотят перенести персонажа в реальный мир";
+}
+.color-5:hover::before {
+    content: "У многих это очень круто получается";
+}
+.color-6:hover::before {
+    content: "Можно использовать разные материалы";
+}
+.color-7:hover::before {
+    content: "Косплей не только создание костюмов";
+}
+.color-8:hover::before {
+    content: "Бывают очень круто нарисованные персонажи, за которые дают призы на фестивале";
+}
+.color-9:hover::before {
+    content: "Игромир наш отличный аналог Comic-Con, есть  что еще улучшать, но получить на этом фестивале, можно заявить о себе в мире";
+}
+.color-10:hover::before {
+    font-size: 1.2rem;
+    content: "В мире косплея появилось много отичных материалов для создания костюма, Eva-foam один из них";
+}
+.color-11:hover::before {
+    font-size: 1.2rem;
+    content: "Worbla стала большим открытием для американских косплееров, этот материал очень гибкий и легкий, творить с ним одно удовольствие";
+}
+.color-12:hover::before {
+    content: "Kamui colplay - доказала, что можно стать известным на весь мир косплеем, создавая отличные костюмы каждый год";
+}
+.color-13:hover::before {
+    content: "Для косплея у вас появится отличное место для создания костюмов и не только";
+}
+.color-14:hover::before {
+    content: "Как я говорил выше, косплей не только создание костюмов";
+}
+.color-15:hover::before {
+    content: "Применение знание о разных материалах, можно использовать в быту.";
+}
+
+.color-1::before,
+.color-2::before,
+.color-3::before,
+.color-4::before,
+.color-5::before,
+.color-6::before,
+.color-7::before,
+.color-8::before,
+.color-9::before,
+.color-10::before,
+.color-11::before,
+.color-12::before,
+.color-13::before,
+.color-14::before,
+.color-15::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    color: beige;
+    box-sizing: border-box;
+    display: inline-block;
+    content: "";
+    border: 2px solid black;
+    transition: all 2s;
+}
+
+.cosplay__project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    & .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        position: relative;
+        
+        margin-right: 10px;
+        margin-bottom: 100px;
+        padding: 10px;
+        width: 380px;
+        overflow: hidden;
+        box-shadow: 0 0 10px beige;
+
+        // &:hover span:nth-child(1),
+        // &:hover span:nth-child(2),
+        // &:hover span:nth-child(3),
+        // &:hover span:nth-child(4) {
+        //     animation-play-state: running;
+        // }
+        
+        &:hover span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            // background: linear-gradient(to right, red, red, red);
+            background-color: olive;
+            animation: animate1 2s linear infinite;
+        }
+
+        @keyframes animate1 {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            } 
+        }
+        &:hover span:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            // background: linear-gradient(to bottom, red, red, red);
+            background-color: olive;
+            animation: animate2 2s linear infinite;
+        }
+
+        @keyframes animate2 {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            } 
+        }
+        &:hover span:nth-child(3) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            // background: linear-gradient(to left, red, red, red);
+            background-color: olive;
+            animation: animate3 2s linear infinite;
+        }
+
+        @keyframes animate3 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            } 
+        }
+        &:hover span:nth-child(4) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            // background: linear-gradient(to top, red, red, red);
+            background-color: olive;
+            animation: animate4 2s linear infinite;
+        }
+
+        @keyframes animate4 {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-100%);
+            } 
+        }
+
+        &-image {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        & img {
+            margin: auto;
+            margin-right: 5px;
+            width: 45%;
+            
+        }
+
+        & .btn {
+            font-family: @fontEnglishHanalei;
+        }
+    }
+}
+
+.big-card {
+    display: block;
+    position: relative;
+    padding: 10px;
+    width: 1000px;
+
+    // border: 2px solid beige;
+    background: linear-gradient(45deg, red, blue);
+
+    & img {
+        width: 200px;
+    }
+
+    & input {
+        display: none;
+    }
+
+    & .input-style {
+        position: absolute;
+        display: block;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://api.icons8.com/download/1a63ee8a70a9212b47fced5d9870b4daa7fa53f7/windows10/PNG/512/User_Interface/delete_sign-512.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.hidden {
+    display: none;
 }
