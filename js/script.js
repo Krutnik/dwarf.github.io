@@ -84,7 +84,7 @@ class CardCosplay {
         <span></span>
         <span></span>
         <span></span>
-        <h2>${this.name}</h2>
+        <h3>${this.name}</h3>
         <div class="card-image">
             <img src="${this.src}" alt="${this.alt}">
             <img src="${this.src2}" alt="${this.alt2}">
@@ -176,4 +176,101 @@ function more() {
     }
 }
 
+class CardInWorkCosplay {
+    #_names;
+    #_srcs;
+    #_alts;
+    #_descriptions;
+    #_parents;
 
+    constructor(names, srcs, alts, descriptions, parents) {
+        this.names = names;
+        this.srcs = srcs;
+        this.alts = alts;
+        this.descriptions = descriptions;
+        this.parents = document.querySelector('.in-work__items');
+    }
+
+    get names() {
+        return this.#_names;
+    }
+    set names(namesValue) {
+        this.#_names = namesValue;
+    }
+s
+    get srcs() {
+        return this.#_srcs;
+    }
+    set srcs(srcsValue) {
+        this.#_srcs = srcsValue;
+    }
+
+    get alts() {
+        return this.#_alts;
+    }
+    set alts(altsValue) {
+        this.#_alts = altsValue;
+    }
+
+    get descriptions() {
+        return this.#_descriptions;
+    }
+    set descriptions(descriptionsValue) {
+        this.#_descriptions = descriptionsValue;
+    }
+
+    get parents() {
+        return this.#_parents;
+    }
+    set parents(parentsValue) {
+        this.#_parents = parentsValue;
+    }
+
+    createCardInWorkCosplay() {
+        let elems = document.createElement('div');
+        elems.classList.add('item');
+        elems.innerHTML = `
+        
+        <h3>${this.names}</h3>
+        <div>
+            <img src="${this.srcs}" alt="${this.alts}">
+            <h3>Description:</h3>
+            <p>${this.descriptions}</p>
+        </div>
+        
+        `;
+        this.parents.append(elems);
+    }
+}
+
+let items = [
+    {
+        name: 'Lostvein',
+        src: 'img/lostvein.jpg',
+        alt: 'lostvein',
+        description: '...'
+    },
+    {
+        name: 'Lostvein',
+        src: 'img/lostvein.jpg',
+        alt: 'lostvein',
+        description: '...'
+    },
+    {
+        name: 'Lostvein',
+        src: 'img/lostvein.jpg',
+        alt: 'lostvein',
+        description: '...'
+    }
+]
+
+let item;
+
+for (let i = 0; i < items.length; i++) {
+    item = new CardInWorkCosplay(
+        items[i]['name'],
+        items[i]['src'],
+        items[i]['alt'],
+        items[i]['description'],
+        '.in-work__items').createCardInWorkCosplay();
+} 
