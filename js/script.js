@@ -172,6 +172,7 @@ function more() {
             cart.classList.add('card');
             cart.classList.remove('big-card');
             cartInput.classList.toggle('hidden');
+            cart = document.removeChild('input');
         }
     }
 }
