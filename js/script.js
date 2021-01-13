@@ -84,16 +84,20 @@ class CardCosplay {
         <span></span>
         <span></span>
         <span></span>
-        <h3>${this.name}</h3>
-        <div class="card-image">
-            <img src="${this.src}" alt="${this.alt}">
-            <img src="${this.src2}" alt="${this.alt2}">
+        <div class="card__title">
+            <h3>${this.name}</h3>
+            <div class="card__title__image">
+                <img src="${this.src}" alt="${this.alt}">
+                <img src="${this.src2}" alt="${this.alt2}">
+            </div>
         </div>
-        <h3>Description:</h3>
-        <p>${this.description}</p>
-        <h3>Material:</h3>
-        <p>${this.material}</p>
-        <input class="btn" type="button" value="More" onclick="more()">
+        <div class="card__description">
+            <h3>Description:</h3>
+            <p>${this.description}</p>
+            <h3>Material:</h3>
+            <p>${this.material}</p>
+            <input class="card__description__btn" type="button" value="More" onclick="more()">
+        </div>
         
         `;
         this.parent.append(elem);
@@ -101,15 +105,6 @@ class CardCosplay {
 }
 
 let cards = [
-    {
-        name: 'Lostvein',
-        src: 'img/lostvein.jpg',
-        alt: 'lostvein',
-        src2: 'img/lost.jpg',
-        alt2: 'lostvein',
-        description: '...',
-        material: 'Wood'
-    },
     {
         name: 'Lostvein',
         src: 'img/lostvein.jpg',
@@ -136,7 +131,34 @@ let cards = [
     //     alt2: 'lostvein',
     //     description: '...',
     //     material: 'Wood'
-    // }
+    // },
+    // {
+    //     name: 'Lostvein',
+    //     src: 'img/lostvein.jpg',
+    //     alt: 'lostvein',
+    //     src2: 'img/lost.jpg',
+    //     alt2: 'lostvein',
+    //     description: '...',
+    //     material: 'Wood'
+    // },
+    // {
+    //     name: 'Lostvein',
+    //     src: 'img/lostvein.jpg',
+    //     alt: 'lostvein',
+    //     src2: 'img/lost.jpg',
+    //     alt2: 'lostvein',
+    //     description: '...',
+    //     material: 'Wood'
+    // },
+    {
+        name: 'Lostvein',
+        src: 'img/lostvein.jpg',
+        alt: 'lostvein',
+        src2: 'img/lost.jpg',
+        alt2: 'lostvein',
+        description: '...',
+        material: 'Wood'
+    }
 ]
 
 let card;
@@ -155,7 +177,8 @@ for (let i = 0; i < cards.length; i++) {
 
 
 let cart = document.querySelector('.card');
-let btnReset = document.querySelector('.input-style')
+let btnReset = document.querySelector('.input-style');
+let children;
 
 function more() {
     cart.classList.remove('card');
@@ -171,8 +194,8 @@ function more() {
         cartInput.onclick = function() {
             cart.classList.add('card');
             cart.classList.remove('big-card');
-            cartInput.classList.toggle('hidden');
-            cart = document.removeChild('input');
+            children = cart.lastChild;
+            cart.removeChild(children);
         }
     }
 }
@@ -232,11 +255,11 @@ s
         elems.classList.add('item');
         elems.innerHTML = `
         
-        <h3>${this.names}</h3>
-        <div>
-            <img src="${this.srcs}" alt="${this.alts}">
-            <h3>Description:</h3>
-            <p>${this.descriptions}</p>
+        <h3 class="item__title">${this.names}</h3>
+        <div class="item__description">
+            <img class="item__description__image" src="${this.srcs}" alt="${this.alts}">
+            <h3 class="item__description__title">Description:</h3>
+            <p class="item__description__text">${this.descriptions}</p>
         </div>
         
         `;
@@ -245,6 +268,12 @@ s
 }
 
 let items = [
+    {
+        name: 'Lostvein',
+        src: 'img/lostvein.jpg',
+        alt: 'lostvein',
+        description: '...'
+    },
     {
         name: 'Lostvein',
         src: 'img/lostvein.jpg',
@@ -275,3 +304,70 @@ for (let i = 0; i < items.length; i++) {
         items[i]['description'],
         '.in-work__items').createCardInWorkCosplay();
 } 
+
+
+let btnWood = document.getElementById('wood');
+let millingCutter = document.querySelector('.assistant__power-tool__milling-cutter');
+let enraver = document.querySelector('.assistant__power-tool__enraver');
+let lshm = document.querySelector('.assistant__power-tool__lshm');
+let eshm = document.querySelector('.assistant__power-tool__eshm');
+
+btnWood.onclick = function() {
+    if (millingCutter.classList.contains('new-position') == false && 
+    enraver.classList.contains('new-position-two') == false && 
+    lshm.classList.contains('new-position-three') == false && 
+    eshm.classList.contains('new-position-four') == false) {
+            setTimeout(function() {
+                millingCutter.classList.add('new-position');
+                enraver.classList.add('new-position-two');
+                lshm.classList.add('new-position-three');
+                eshm.classList.add('new-position-four');
+            }, 100);
+    }
+    else {
+        setTimeout(function () {
+            millingCutter.classList.remove('new-position');
+            enraver.classList.remove('new-position-two');
+            lshm.classList.remove('new-position-three');
+            eshm.classList.remove('new-position-four');
+        }, 100);
+    }
+}
+
+let millingCutterImage = document.querySelector('.assistant__power-tool__milling-cutter__image');
+let millingCutterTitle = document.querySelector('.assistant__power-tool__milling-cutter__title'); 
+let millingCutterText = document.querySelector('.assistant__power-tool__milling-cutter__text');
+
+millingCutter.onclick = function() {
+    if(millingCutter.classList.contains('test') == false) {
+        millingCutter.classList.add('test');
+        millingCutterImage.classList.add('test-2');
+        millingCutterTitle.classList.add('test-3');
+        millingCutterText.classList.add('test-4');
+    }
+    else {
+        millingCutter.classList.remove('test');
+        millingCutterImage.classList.remove('test-2');
+        millingCutterTitle.classList.remove('test-3');
+        millingCutterText.classList.remove('test-4');
+    }
+}
+
+let enraverImage = document.querySelector('.assistant__power-tool__enraver__image');
+let enraverTitle = document.querySelector('.assistant__power-tool__enraver__title');
+let enraverText = document.querySelector('.assistant__power-tool__enraver__text');
+
+enraver.onclick = function () {
+    if (enraver.classList.contains('test') == false) {
+        enraver.classList.add('test');
+        enraverImage.classList.add('test-2');
+        enraverTitle.classList.add('test-3');
+        enraverText.classList.add('test-4');
+    }
+    else {
+        enraver.classList.remove('test');
+        enraverImage.classList.remove('test-2');
+        enraverTitle.classList.remove('test-3');
+        enraverText.classList.remove('test-4');
+    }
+}
