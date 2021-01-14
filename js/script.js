@@ -311,18 +311,31 @@ let millingCutter = document.querySelector('.assistant__power-tool__milling-cutt
 let enraver = document.querySelector('.assistant__power-tool__enraver');
 let lshm = document.querySelector('.assistant__power-tool__lshm');
 let eshm = document.querySelector('.assistant__power-tool__eshm');
+let screwdriver = document.querySelector('.assistant__power-tool__screwdriver');
+let jigsaw = document.querySelector('.assistant__power-tool__jigsaw');
+let multiTool = document.querySelector('.assistant__power-tool__multi-tool');
+let circularSaw = document.querySelector('.assistant__power-tool__circular-saw');
 
 btnWood.onclick = function() {
     if (millingCutter.classList.contains('new-position') == false && 
-    enraver.classList.contains('new-position-two') == false && 
-    lshm.classList.contains('new-position-three') == false && 
-    eshm.classList.contains('new-position-four') == false) {
-            setTimeout(function() {
-                millingCutter.classList.add('new-position');
-                enraver.classList.add('new-position-two');
-                lshm.classList.add('new-position-three');
-                eshm.classList.add('new-position-four');
-            }, 100);
+        enraver.classList.contains('new-position-two') == false && 
+        lshm.classList.contains('new-position-three') == false && 
+        eshm.classList.contains('new-position-four') == false &&
+        screwdriver.classList.contains('new-position-five') == false &&
+        jigsaw.classList.contains('new-position-six') == false &&
+        multiTool.classList.contains('new-position-seven') == false &&
+        circularSaw.classList.contains('new-position-eight') == false) {
+
+        setTimeout(function() {
+            millingCutter.classList.add('new-position');
+            enraver.classList.add('new-position-two');
+            lshm.classList.add('new-position-three');
+            eshm.classList.add('new-position-four');
+            screwdriver.classList.add('new-position-five');
+            jigsaw.classList.add('new-position-six');
+            multiTool.classList.add('new-position-seven');
+            circularSaw.classList.add('new-position-eight');
+        }, 100);
     }
     else {
         setTimeout(function () {
@@ -330,9 +343,14 @@ btnWood.onclick = function() {
             enraver.classList.remove('new-position-two');
             lshm.classList.remove('new-position-three');
             eshm.classList.remove('new-position-four');
+            screwdriver.classList.remove('new-position-five');
+            jigsaw.classList.remove('new-position-six');
+            multiTool.classList.remove('new-position-seven');
+            circularSaw.classList.remove('new-position-eight');
         }, 100);
     }
 }
+
 
 let millingCutterImage = document.querySelector('.assistant__power-tool__milling-cutter__image');
 let millingCutterTitle = document.querySelector('.assistant__power-tool__milling-cutter__title'); 
@@ -369,5 +387,266 @@ enraver.onclick = function () {
         enraverImage.classList.remove('test-2');
         enraverTitle.classList.remove('test-3');
         enraverText.classList.remove('test-4');
+    }
+}
+
+let lshmImage = document.querySelector('.assistant__power-tool__lshm__image');
+let lshmTitle = document.querySelector('.assistant__power-tool__lshm__title');
+let lshmText = document.querySelector('.assistant__power-tool__lshm__text');
+
+lshm.onclick = function () {
+    if (lshm.classList.contains('test') == false) {
+        lshm.classList.add('test');
+        lshmImage.classList.add('test-2');
+        lshmTitle.classList.add('test-3');
+        lshmText.classList.add('test-4');
+    }
+    else {
+        lshm.classList.remove('test');
+        lshmImage.classList.remove('test-2');
+        lshmTitle.classList.remove('test-3');
+        lshmText.classList.remove('test-4');
+    }
+}
+let eshmImage = document.querySelector('.assistant__power-tool__eshm__image');
+let eshmTitle = document.querySelector('.assistant__power-tool__eshm__title');
+let eshmText = document.querySelector('.assistant__power-tool__eshm__text');
+
+eshm.onclick = function () {
+    if (eshm.classList.contains('test') == false) {
+        eshm.classList.add('test');
+        eshmImage.classList.add('test-2');
+        eshmTitle.classList.add('test-3');
+        eshmText.classList.add('test-4');
+    }
+    else {
+        eshm.classList.remove('test');
+        eshmImage.classList.remove('test-2');
+        eshmTitle.classList.remove('test-3');
+        eshmText.classList.remove('test-4');
+    }
+}
+let screwdriverImage = document.querySelector('.assistant__power-tool__screwdriver__image');
+let screwdriverTitle = document.querySelector('.assistant__power-tool__screwdriver__title');
+let screwdriverText = document.querySelector('.assistant__power-tool__screwdriver__text');
+
+screwdriver.onclick = function () {
+    if (screwdriver.classList.contains('test') == false) {
+        screwdriver.classList.add('test');
+        screwdriverImage.classList.add('test-2');
+        screwdriverTitle.classList.add('test-3');
+        screwdriverText.classList.add('test-4');
+    }
+    else {
+        screwdriver.classList.remove('test');
+        screwdriverImage.classList.remove('test-2');
+        screwdriverTitle.classList.remove('test-3');
+        screwdriverText.classList.remove('test-4');
+    }
+}
+let jigsawImage = document.querySelector('.assistant__power-tool__jigsaw__image');
+let jigsawTitle = document.querySelector('.assistant__power-tool__jigsaw__title');
+let jigsawText = document.querySelector('.assistant__power-tool__jigsaw__text');
+
+jigsaw.onclick = function () {
+    if (jigsaw.classList.contains('test') == false) {
+        jigsaw.classList.add('test');
+        jigsawImage.classList.add('test-2');
+        jigsawTitle.classList.add('test-3');
+        jigsawText.classList.add('test-4');
+    }
+    else {
+        jigsaw.classList.remove('test');
+        jigsawImage.classList.remove('test-2');
+        jigsawTitle.classList.remove('test-3');
+        jigsawText.classList.remove('test-4');
+    }
+}
+let multiToolImage = document.querySelector('.assistant__power-tool__multi-tool__image');
+let multiToolTitle = document.querySelector('.assistant__power-tool__multi-tool__title');
+let multiToolText = document.querySelector('.assistant__power-tool__multi-tool__text');
+
+multiTool.onclick = function () {
+    if (multiTool.classList.contains('test') == false) {
+        multiTool.classList.add('test');
+        multiToolImage.classList.add('test-2');
+        multiToolTitle.classList.add('test-3');
+        multiToolText.classList.add('test-4');
+    }
+    else {
+        multiTool.classList.remove('test');
+        multiToolImage.classList.remove('test-2');
+        multiToolTitle.classList.remove('test-3');
+        multiToolText.classList.remove('test-4');
+    }
+}
+let circularSawImage = document.querySelector('.assistant__power-tool__circular-saw__image');
+let circularSawTitle = document.querySelector('.assistant__power-tool__circular-saw__title');
+let circularSawText = document.querySelector('.assistant__power-tool__circular-saw__text');
+
+circularSaw.onclick = function () {
+    if (circularSaw.classList.contains('test') == false) {
+        circularSaw.classList.add('test');
+        circularSawImage.classList.add('test-2');
+        circularSawTitle.classList.add('test-3');
+        circularSawText.classList.add('test-4');
+    }
+    else {
+        circularSaw.classList.remove('test');
+        circularSawImage.classList.remove('test-2');
+        circularSawTitle.classList.remove('test-3');
+        circularSawText.classList.remove('test-4');
+    }
+}
+
+let btnPlastic = document.getElementById('plastic');
+let glueGun = document.querySelector('.assistant__power-tool__glue-gun');
+let technicalHairDryer = document.querySelector('.assistant__power-tool__technical-hair-dryer');
+
+btnPlastic.onclick = function () {
+    if (glueGun.classList.contains('new-position-two') == false &&
+        enraver.classList.contains('new-position') == false &&
+        multiTool.classList.contains('new-position-four') == false &&
+        technicalHairDryer.classList.contains('new-position-three') == false) {
+
+        setTimeout(function () {
+            glueGun.classList.add('new-position-two');
+            enraver.classList.add('new-position');
+            multiTool.classList.add('new-position-four');
+            technicalHairDryer.classList.add('new-position-three');
+        }, 100);
+    }
+    else {
+        setTimeout(function () {
+            glueGun.classList.remove('new-position-two');
+            enraver.classList.remove('new-position');
+            multiTool.classList.remove('new-position-four');
+            technicalHairDryer.classList.remove('new-position-three');
+        }, 100);
+    }
+};
+
+let glueGunImage = document.querySelector('.assistant__power-tool__glue-gun__image');
+let glueGunTitle = document.querySelector('.assistant__power-tool__glue-gun__title');
+let glueGunText = document.querySelector('.assistant__power-tool__glue-gun__text');
+
+glueGun.onclick = function () {
+    if (glueGun.classList.contains('test') == false) {
+        glueGun.classList.add('test');
+        glueGunImage.classList.add('test-2');
+        glueGunTitle.classList.add('test-3');
+        glueGunText.classList.add('test-4');
+    }
+    else {
+        glueGun.classList.remove('test');
+        glueGunImage.classList.remove('test-2');
+        glueGunTitle.classList.remove('test-3');
+        glueGunText.classList.remove('test-4');
+    }
+}
+let technicalHairDryerImage = document.querySelector('.assistant__power-tool__technical-hair-dryer__image');
+let technicalHairDryerTitle = document.querySelector('.assistant__power-tool__technical-hair-dryer__title');
+let technicalHairDryerText = document.querySelector('.assistant__power-tool__technical-hair-dryer__text');
+
+technicalHairDryer.onclick = function () {
+    if (technicalHairDryer.classList.contains('test') == false) {
+        technicalHairDryer.classList.add('test');
+        technicalHairDryerImage.classList.add('test-2');
+        technicalHairDryerTitle.classList.add('test-3');
+        technicalHairDryerText.classList.add('test-4');
+    }
+    else {
+        technicalHairDryer.classList.remove('test');
+        technicalHairDryerImage.classList.remove('test-2');
+        technicalHairDryerTitle.classList.remove('test-3');
+        technicalHairDryerText.classList.remove('test-4');
+    }
+}
+
+
+let btnMetall = document.getElementById('metall');
+let ushm = document.querySelector('.assistant__power-tool__angle-grinder');
+let tocylinder = document.querySelector('.assistant__power-tool__tocylinder');
+let compressor = document.querySelector('.assistant__power-tool__compressor');
+
+
+btnMetall.onclick = function () {
+    if (ushm.classList.contains('new-position-four') == false &&
+        enraver.classList.contains('new-position-five') == false &&
+        multiTool.classList.contains('new-position') == false &&
+        tocylinder.classList.contains('new-position-two') == false &&
+        compressor.classList.contains('new-position-three') == false) {
+
+        setTimeout(function () {
+            ushm.classList.add('new-position-four');
+            tocylinder.classList.add('new-position-two');
+            compressor.classList.add('new-position-three');
+            enraver.classList.add('new-position-five');
+            multiTool.classList.add('new-position');
+        }, 100);
+    }
+    else {
+        setTimeout(function () {
+            ushm.classList.remove('new-position-four');
+            tocylinder.classList.remove('new-position-two');
+            compressor.classList.remove('new-position-three');
+            enraver.classList.remove('new-position-five');
+            multiTool.classList.remove('new-position');
+        }, 100);
+    }
+}
+
+let ushmImage = document.querySelector('.assistant__power-tool__angle-grinder__image');
+let ushmTitle = document.querySelector('.assistant__power-tool__angle-grinder__title');
+let ushmText = document.querySelector('.assistant__power-tool__angle-grinder__text');
+
+ushm.onclick = function () {
+    if (ushm.classList.contains('test') == false) {
+        ushm.classList.add('test');
+        ushmImage.classList.add('test-2');
+        ushmTitle.classList.add('test-3');
+        ushmText.classList.add('test-4');
+    }
+    else {
+        ushm.classList.remove('test');
+        ushmImage.classList.remove('test-2');
+        ushmTitle.classList.remove('test-3');
+        ushmText.classList.remove('test-4');
+    }
+}
+let tocylinderImage = document.querySelector('.assistant__power-tool__tocylinder__image');
+let tocylinderTitle = document.querySelector('.assistant__power-tool__tocylinder__title');
+let tocylinderText = document.querySelector('.assistant__power-tool__tocylinder__text');
+
+tocylinder.onclick = function () {
+    if (tocylinder.classList.contains('test') == false) {
+        tocylinder.classList.add('test');
+        tocylinderImage.classList.add('test-2');
+        tocylinderTitle.classList.add('test-3');
+        tocylinderText.classList.add('test-4');
+    }
+    else {
+        tocylinder.classList.remove('test');
+        tocylinderImage.classList.remove('test-2');
+        tocylinderTitle.classList.remove('test-3');
+        tocylinderText.classList.remove('test-4');
+    }
+}
+let compressorImage = document.querySelector('.assistant__power-tool__compressor__image');
+let compressorTitle = document.querySelector('.assistant__power-tool__compressor__title');
+let compressorText = document.querySelector('.assistant__power-tool__compressor__text');
+
+compressor.onclick = function () {
+    if (compressor.classList.contains('test') == false) {
+        compressor.classList.add('test');
+        compressorImage.classList.add('test-2');
+        compressorTitle.classList.add('test-3');
+        compressorText.classList.add('test-4');
+    }
+    else {
+        compressor.classList.remove('test');
+        compressorImage.classList.remove('test-2');
+        compressorTitle.classList.remove('test-3');
+        compressorText.classList.remove('test-4');
     }
 }

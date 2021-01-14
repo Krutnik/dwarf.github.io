@@ -20,31 +20,10 @@
 			</div>
 			<div class="menu">
 				<ul class="menu__item">
-					<li class="menu__item__list"><a href="#">Проекты</a>
-						<ul class="new-list">
-							<li><a href="#">sword</a></li>
-							<li><a href="#">axe</a></li>
-							<li><a href="#">molot</a></li>
-							<li><a href="#">shield</a></li>
-						</ul>
-					</li>
-					<li class="menu__item__list"><a href="#in_work">В работе</a>
-						<ul class="new-list">
-							<li><a href="#">sword</a></li>
-							<li><a href="#">axe</a></li>
-							<li><a href="#">molot</a></li>
-							<li><a href="#">shield</a></li>
-						</ul>
-					</li>
-					<li class="menu__item__list"><a href="#helps">Наши помошники</a>
-						<ul class="new-list">
-							<li><a href="#">sword</a></li>
-							<li><a href="#">axe</a></li>
-							<li><a href="#">molot</a></li>
-							<li><a href="#">shield</a></li>
-						</ul>
-					</li>
-					<li class="menu__item__list"><a href="#about_me">О нас</a></li>
+					<li class="menu__item__list"><a href="#project">Проекты</a></li>
+					<li class="menu__item__list"><a href="#in-work">В работе</a></li>
+					<li class="menu__item__list"><a href="#helps">Наши помошники</a></li>
+					<li class="menu__item__list"><a href="#about-me">О нас</a></li>
 				</ul>
 				<button class="btn">Заказать проект</button>
 			</div>
@@ -79,13 +58,13 @@
 				</div>
 			</div>
 		</section>
-		<section class="cosplay">
+		<section id="project" class="cosplay">
 			<h2>Завершенные проекты</h2>
 			<div class="cosplay__project">
 
 			</div>
 		</section>
-		<section class="in-work">
+		<section id="in-work" class="in-work">
 			<h2>В работе</h2>
 			<div class="in-work__items">
 
@@ -101,12 +80,12 @@
 					</button>
 				</div>
 				<div class="material">
-					<button>
+					<button id="plastic">
 						<img src="./img/plastic.jpg" alt="plastic">
 					</button>
 				</div>
 				<div class="material">
-					<button>
+					<button id="metall">
 						<img src="./img/metall.jpg" alt="metall">
 					</button>
 				</div>
@@ -122,64 +101,64 @@
 				</div>
 				<div class="assistant__power-tool__lshm">
 					<img class="assistant__power-tool__lshm__image" src="./img/lschm.jpg" alt="лшм">
-					<h3 class="assistant__power-tool__lshm__title">Ленточная шлифовальная машинка</h3>
+					<h3 class="assistant__power-tool__lshm__title">ЛШМ</h3>
 					<p class="assistant__power-tool__lshm__text">Высокоэффективное и комфортное шлифование</p>
 				</div>
-				<!-- металл<div class="assistant__power-tool__angle-grinder">
-					<img src="" alt="ушм">
-					<h3>Угловая шлифовальная машинка (болгарка)</h3>
-					<p>Оптимальная управляемость при решении домашних задач</p>
-				</div> -->
+				<div class="assistant__power-tool__angle-grinder">
+					<img class="assistant__power-tool__angle-grinder__image" src="./img/ushm.jpg" alt="ушм">
+					<h3 class="assistant__power-tool__angle-grinder__title">УШМ (болгарка)</h3>
+					<p class="assistant__power-tool__angle-grinder__text">Оптимальная управляемость при решении домашних задач</p>
+				</div>
 				<div class="assistant__power-tool__eshm">
 					<img class="assistant__power-tool__eshm__image" src="./img/eschm.jpg" alt="эшм">
-					<h3 class="assistant__power-tool__eshm__title">Экцентриковая шлифовальная машинка</h3>
+					<h3 class="assistant__power-tool__eshm__title">ЭШМ</h3>
 					<p class="assistant__power-tool__eshm__text">Превосходное качество поверхностей без особых усилий</p>
 				</div>
 				<div class="assistant__power-tool__screwdriver">
 					<img class="assistant__power-tool__screwdriver__image" src="./img/screwdriver.jpg" alt="шуруповерт">
 					<h3 class="assistant__power-tool__screwdriver__title">Шуруповерт</h3>
-					<p class="assistant__power-tool__screwdriver__text">Невероятно простая в использовании аккумуляторная дрель отличается исключительным удобством</p>
+					<p class="assistant__power-tool__screwdriver__text">Незаменимый помошник закрутить шуруп или простверлить разный материал</p>
 				</div>
 				<div class="assistant__power-tool__jigsaw">
 					<img class="assistant__power-tool__jigsaw__image" src="./img/jigsaw.jpg" alt="лобзик">
-					<h3 class="assistant__power-tool__jigsaw__title"></h3>
-					<p class="assistant__power-tool__jigsaw__text"></p>
+					<h3 class="assistant__power-tool__jigsaw__title">лобзик</h3>
+					<p class="assistant__power-tool__jigsaw__text">Легкий, компактный и удобный в работе инструмент</p>
 				</div>
 				<div class="assistant__power-tool__multi-tool">
 					<img class="assistant__power-tool__multi-tool__image" src="./img/multi-tool.jpg" alt="мультиинструмент">
-					<h3 class="assistant__power-tool__multi-tool__title"></h3>
-					<p class="assistant__power-tool__multi-tool__text"></p>
+					<h3 class="assistant__power-tool__multi-tool__title">мультиинструмент</h3>
+					<p class="assistant__power-tool__multi-tool__text">Универсальное решение для разнообразных домашних работ</p>
 				</div>
 				<div class="assistant__power-tool__circular-saw">
 					<img class="assistant__power-tool__circular-saw__image" src="./img/circular-saw.jpg" alt="циркульрная пила">
-					<h3 class="assistant__power-tool__circular-saw__title"></h3>
-					<p class="assistant__power-tool__circular-saw__text"></p>
+					<h3 class="assistant__power-tool__circular-saw__title">циркульрная пила</h3>
+					<p class="assistant__power-tool__circular-saw__text">Полная управляемость при выполнении точных прямых пропилов</p>
 				</div>
-				<!-- пластик<div class="assistant__power-tool__glue-gun">
-					<img src="" alt="клеевой пистолет">
-					<h3></h3>
-					<p></p>
-				</div> -->
-				<!-- металл<div class="assistant__power-tool__tocylinder">
-					<img src="" alt="точильный станок">
-					<h3></h3>
-					<p></p>
-				</div> -->
-				<!-- пластик<div class="assistant__power-tool__technical-hair-dryer">
-					<img src="" alt="технический фен">
-					<h3></h3>
-					<p></p>
-				</div> -->
-				<!-- металл<div class="assistant__power-tool__compressor">
-					<img src="" alt="компрессор">
-					<h3></h3>
-					<p></p>
-				</div> --> -->
+				<div class="assistant__power-tool__glue-gun">
+					<img class="assistant__power-tool__glue-gun__image" src="./img/glue-gun.jpg" alt="клеевой пистолет">
+					<h3 class="assistant__power-tool__glue-gun__title">клеевой пистолет</h3>
+					<p class="assistant__power-tool__glue-gun__text">Фантастические результаты при склеивании самых разнообразных материалов</p>
+				</div>
+				<div class="assistant__power-tool__tocylinder">
+					<img class="assistant__power-tool__tocylinder__image" src="./img/tocylinder.jpg" alt="точильный станок">
+					<h3 class="assistant__power-tool__tocylinder__title">точильный станок</h3>
+					<p class="assistant__power-tool__tocylinder__text">удобно точить как мелкие детали, так и крупные, и не только металл</p>
+				</div>
+				<div class="assistant__power-tool__technical-hair-dryer">
+					<img class="assistant__power-tool__technical-hair-dryer__image" src="./img/technical-hair-dryer.jpg" alt="технический фен">
+					<h3 class="assistant__power-tool__technical-hair-dryer__title">технический фен</h3>
+					<p class="assistant__power-tool__technical-hair-dryer__text">Простой и удобный в использовании технический фен</p>
+				</div>
+				<div class="assistant__power-tool__compressor">
+					<img class="assistant__power-tool__compressor__image" src="./img/compressor.jpg" alt="компрессор">
+					<h3 class="assistant__power-tool__compressor__title">компрессор</h3>
+					<p class="assistant__power-tool__compressor__text">огромные возможности работы с таким товарищем с разными материалами</p>
+				</div>
 			</div>
 		</section>
 	</main>
 	<footer>
-
+		<h2>Как жизнь?</h2>
 	</footer>
 
 

@@ -17,17 +17,18 @@ html {
     width: 1900px;
     height: 100%;
     font-size: 16px;
-
-	/* english language */
-	/* font-family: 'Hanalei Fill', cursive; */
-
-	/* russian language */
-	/* font-family: 'Pacifico', cursive; */
 }
 
 body {
     background: linear-gradient(0deg, #1f2ce2,#2ad6bf);
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(0deg, red, orange);
 }
 
 section {
@@ -40,6 +41,13 @@ h2 {
     font-family: @fontRussianPacifico;
     font-size: 3rem;
     letter-spacing: 1px;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(0deg, red, orange);
 }
 
 .header {
@@ -92,17 +100,18 @@ h2 {
                 & a {
                     margin: 0 10px;
                     padding: 5px 10px;
+                    border-radius: 30px;
                     color: @fontColor;
                     text-decoration: none;
                     font-size: 1.5rem;
                     font-family: @fontRussianPacifico;
 
                     &:hover {
-                        background-color: lime;
+                        background-color: rgb(207, 221, 17);
                     }
 
                     &:active {
-                        background-color: #fff;
+                        background-color: rgb(196, 85, 85);
                     }
                 }
 
@@ -728,14 +737,14 @@ h2 {
             @keyframes imgAnimate {
                 0% {}
                 25% {
-                    border: 10px solid red;
+                    border: 5px solid rgb(255, 0, 0);
                 }
                 50% {
                     border: 5px solid blue;
-                    transform: translateX(100px);
+                    // transform: translateX(100px);
                 }
                 75% {
-                    border: 10px solid green;
+                    border: 5px solid green;
                 }
                 
             }
@@ -753,7 +762,7 @@ h2 {
 .assistant {
     display: flex;
     flex-direction: column;
-    height: 2000px;
+    height: 1700px;
 
     &__power-tool {
         position: relative;
@@ -793,27 +802,6 @@ h2 {
             }
         }
 
-
-        &__angle-grinder,
-        &__glue-gun,
-        &__tocylinder,
-        &__power-tool,
-        &__technical-hair-dryer,
-        &__compressor {
-            // display: flex;
-            // flex-direction: column;
-            // align-items: center;
-
-            // margin-bottom: 20px;
-            // padding: 10px;
-            // width: 300px;
-            // height: 500px;
-            // box-sizing: border-box;
-            // border: 1px solid beige;
-            // overflow: auto;
-            // scrollbar-color: red;
-        }
-
         &__milling-cutter,
         &__enraver,
         &__lshm,
@@ -830,8 +818,8 @@ h2 {
 
             width: 300px;
             height: 300px;
-            top: 10px;
-            left: 10px;
+            top: 20px;
+            left: 30px;
             z-index: 2;
 
             background-color: #fff;
@@ -850,35 +838,187 @@ h2 {
                 transition: 1.5s;
 
             }
-            & h3 {
+            &__title {
                 position: absolute;
                 top: 100px;
                 left: auto;
+                font-family: @fontRussianPacifico;
+                letter-spacing: 2px;
+                text-align: center;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }   
             }
-            & p {
+            &__text {
+                position: absolute;
+                top: 50px;
+                left: auto;
+                margin-top: 50px;
+                padding: 20px;
+                width: 250px;
+                font-family: @fontRussianPacifico;
+                font-size: 0.9rem;
+                // text-transform: capitalize;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &__angle-grinder,
+        &__tocylinder,
+        &__compressor {
+            position: absolute;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 300px;
+            height: 300px;
+            top: 20px;
+            left: 960px;
+            z-index: 2;
+
+            background-color: #fff;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transition: 1.5s;
+
+            &__image {
+                position: relative;
+                z-index: 2;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border: 5px solid red;
+                box-sizing: border-box;
+                transition: 1.5s;
+
+            }
+            &__title {
                 position: absolute;
                 top: 100px;
                 left: auto;
+                font-family: @fontRussianPacifico;
+                letter-spacing: 2px;
+                text-align: center;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                } 
+            }
+            &__text {
+                position: absolute;
+                top: 50px;
+                left: auto;
+                margin-top: 50px;
                 padding: 20px;
+                width: 250px;
+                font-family: @fontRussianPacifico;
+                font-size: 0.9rem;
+                // text-transform: capitalize;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &__glue-gun,
+        &__technical-hair-dryer {
+            position: absolute;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 300px;
+            height: 300px;
+            top: 20px;
+            left: 490px;
+            z-index: 2;
+
+            background-color: #fff;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transition: 1.5s;
+
+            &__image {
+                position: relative;
+                z-index: 2;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border: 5px solid red;
+                box-sizing: border-box;
+                transition: 1.5s;
+
+            }
+            &__title {
+                position: absolute;
+                top: 100px;
+                left: auto;
+                font-family: @fontRussianPacifico;
+                letter-spacing: 2px;
+                text-align: center;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                } 
+            }
+            &__text {
+                position: absolute;
+                top: 50px;
+                left: auto;
+                margin-top: 50px;
+                padding: 20px;
+                width: 250px;
+                font-family: @fontRussianPacifico;
+                font-size: 0.9rem;
+                // text-transform: capitalize;
+
+                &::first-letter {
+                    text-transform: uppercase;
+                }
             }
         }
     }
 }
 
 .new-position {
-    top: 500px;
+    top: 400px;
+    left: 0;
 }
 .new-position-two {
     top: 400px;
-    left: 350px;
+    left: 330px;
 }
 .new-position-three {
-    top: 600px;
-    left: 670px;
+    top: 400px;
+    left: 660px;
 }
 .new-position-four {
-    top: 300px;
-    left: -270px;
+    top: 400px;
+    left: 990px;
+}
+.new-position-five {
+    top: 930px;
+    left: 0;
+}
+.new-position-six {
+    top: 930px;
+    left: 330px;
+}
+.new-position-seven {
+    top: 930px;
+    left: 660px;
+}
+.new-position-eight {
+    top: 930px;
+    left: 990px;
 }
 
 .test {
@@ -900,5 +1040,5 @@ h2 {
 }
 .test-4 {
     transition: 3s;
-    transform: translateY(200px);
+    transform: translateY(230px);
 }
