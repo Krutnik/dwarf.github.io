@@ -1,5 +1,10 @@
+.promo-backround {
+    height: 700px;
+    background-image: url(../img/shadow.jpg);
+}
+
 .promo {
-    background-image: url(../img/sylvana.jpg);
+    /* background-image: url(../img/sylvana.jpg); */
 }
 
 .square-1 {
