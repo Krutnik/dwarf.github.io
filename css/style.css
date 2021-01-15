@@ -1,3 +1,49 @@
+.promo {
+    background-image: url(../img/sylvana.jpg);
+}
+
 .square-1 {
     background-image: url(../img/san-diego.png);
+}
+.square-2 {
+    background-image: url(../img/dremel.png);
+}
+.square-3 {
+    background-image: url(../img/gilgamesh-2.png);
+}
+.square-4 {
+    background-image: url(../img/cosplay.jpg);
+}
+.square-5 {
+    background-image: url(../img/sylvana-2.jpg);
+}
+.square-6 {
+    background-image: url(../img/axe.jpg);
+}
+.square-7 {
+    background-image: url(../img/warcraft.jpg);
+}
+.square-8 {
+    background-image: url(../img/warhammer40k.jpg);
+}
+.square-9 {
+    background-image: url(../img/igromir.jpg);
+}
+.square-10 {
+    background-image: url(../img/eva-foam.jpg);
+}
+.square-11 {
+    background-image: url(../img/worbla.jpg);
+}
+.square-12 {
+    background-image: url(../img/kamui.jpg);
+}
+.square-13 {
+    background-image: url(../img/master.jpg);
+}
+.square-14 {
+    background-image: url(../img/pushka.jpg);
+}
+.square-15 {
+    background-image: url(../img/svetilnik.jpg);
 }
