@@ -1,31 +1,22 @@
 class CardCosplay {
-    #_name;
     #_src;
     #_alt;
     #_src2;
     #_alt2;
+    #_name;
     #_description;
     #_material;
-    #_onclick;
     #_parent;
 
-    constructor(name, src, alt, src2, alt2, description, material, onclick, parent) {
-        this.name = name;
+    constructor(src, alt, src2, alt2, name, description, material, parent) {
         this.src = src;
         this.alt = alt;
         this.src2 = src2;
         this.alt2 = alt2;
+        this.name = name;
         this.description = description;
         this.material = material;
-        this.onclick = onclick;
-        this.parent = document.querySelector('.cosplay__project');
-    }
-
-    get name() {
-        return this.#_name;
-    }
-    set name(nameValue) {
-        this.#_name = nameValue;
+        this.parent = document.querySelector('.container');
     }
 
     get src() {
@@ -56,6 +47,13 @@ class CardCosplay {
         this.#_alt2 = alt2Value;
     }
 
+    get name() {
+        return this.#_name;
+    }
+    set name(nameValue) {
+        this.#_name = nameValue;
+    }
+
     get description() {
         return this.#_description;
     }
@@ -70,13 +68,6 @@ class CardCosplay {
         this.#_material = materialValue;
     }
 
-    get onclick() {
-        return this.#_onclick;
-    }
-    set onclick(onclickValue) {
-        this.#_onclick = onclickValue;
-    }
-
     get parent() {
         return this.#_parent;
     }
@@ -89,24 +80,20 @@ class CardCosplay {
         elem.classList.add('card');
         elem.innerHTML = `
         
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <div class="card__title">
-            <h3>${this.name}</h3>
-            <div class="card__title__image">
+        <div class="face face1">
+            <div class="content">
                 <img src="${this.src}" alt="${this.alt}">
                 <img src="${this.src2}" alt="${this.alt2}">
+                <h3>${this.name}</h3>
             </div>
         </div>
-        <div class="card__description">
-            <h3>Description:</h3>
-            <p>${this.description}</p>
-            <h3>Material:</h3>
-            <p>${this.material}</p>
+        <div class="face face2">
+            <div class="content">
+                <p><span class="eng-text">Description - </span>${this.description}</p>
+                <p><span class="eng-text">Material - </span>${this.material}</p>
+            </div>
         </div>
-        <input class="card__btn" type="button" value="more" onclick="${this.onclick}">
+
         
         `;
         this.parent.append(elem);
@@ -115,64 +102,58 @@ class CardCosplay {
 
 let cards = [
     {
-        name: 'Lostvein',
         src: 'img/lostvein.jpg',
         alt: 'lostvein',
         src2: 'img/lost.jpg',
         alt2: 'lostvein',
+        name: 'Lostvein',
         description: 'Лоствейн - небольшой одноручный меч, изогнутый к острию и имеющий на своей гарде эмблему дракона. Серебристое лезвие меча можно отличить от тёмно- зелёного основания при помощи линии закалки, сквозь которую сделано пять отверстий одинакового диаметра.На боку основания есть вырезы в виде полумесяца.',
-        material: 'Меч выполнен полностью из дерева, красил эмалью, рисунок дракона карандашом выводил, рукоят взял зеленую ленту 20мм ленту',
-        onclick: 'more()'
+        material: 'Меч выполнен полностью из дерева, красил эмалью, рисунок дракона карандашом выводил, рукоят взял зеленую ленту 20мм ленту'
     },
     {
-        name: 'Gilgamesh',
         src: 'img/gilgamesch.jpg',
         alt: 'gilgamesh',
         src2: 'img/gilgamesh-3.png',
         alt2: 'gilgamesh',
-        description: 'Истинное имя Арчера — Гильгамеш, великий король, наполовину человек (отец — Лугальбанда, король города Урук), наполовину — бог (мать — богиня Нинсун). Правил городом-государством шумеров Урук, который был столицей древней Месопотамии. Он был на две трети богом и на треть человеком, и никто другой в мире не мог сравниться с ним. Он был деспотом, обладающим высокой божественностью и верившим в свою непобедимость. Он не просто выдуманная легенда, а, как говорят, действительно существовал и правил пять тысяч лет назад. Он был Королём Героев (英雄王, Eiyū Ō?, англ. King of Heroes), который обладал всеми вещами в мире. История о нём записана в старейшей эпической поэме, Эпосе о Гильгамеше, в которой Гильгамеш изображён героем, которому суждено стать королём и совершить великие подвиги, двигаясь навстречу своей судьбе и справляясь с проблемами вместе со своим лучшим другом Энкиду.',
-        material: 'Броня и меч из пвх, у меча имеется подсветка, парик заказной, также как и линзы, под броней обычный синий костюм',
-        onclick: 'regh()'
+        name: 'Gilgamesh',
+        description: 'Истинное имя Арчера — Гильгамеш, великий король, наполовину человек (отец — Лугальбанда, король города Урук), наполовину — бог (мать — богиня Нинсун). Правил городом-государством шумеров Урук, который был столицей древней Месопотамии. Он был на две трети богом и на треть человеком, и никто другой в мире не мог сравниться с ним. Он был деспотом, обладающим высокой божественностью и верившим в свою непобедимость.',
+        material: 'Броня и меч из пвх, у меча имеется подсветка, парик заказной, также как и линзы, под броней обычный синий костюм'
     },
     {
-        name: 'Grove pugalo',
         src: 'img/grove-pugalo.png',
         alt: 'grove pugalo',
         src2: 'img/pugalo2.jpg',
         alt2: 'grove pugalo',
-        description: 'Пугало (англ. Scarecrow) — суперзлодей вселенной DC Comics. В детстве, когда Джонатан Крейн был ещё школьником, над ним издевались все его «знакомые». Однако Крейн обладал развитым умом. В студенческом возрасте он поступил в Готэмский университет на факультет психологии. Вскоре после отличной учёбы в университете Крейн стал профессором Аркхэмской клиники, однако его коллеги обнаружили профессора за опытами, проводимыми над обычными людьми. Его просто-напросто выгнали из Аркхэма. Движимый желанием отомстить за все свои обиды, обладающий навыками химии Крейн изобрёл галлюциогенный газ. Только Крейн начал осуществлять свой план, напав на бывших коллег профессоров, как на его пути встали Бэтмен и Робин. Профессора Крейна несколько раз сажали в тюрьму за преступления связанные с запугиванием людей.',
-        material: 'Пвх трубы и шланги, немного бинтов, иглы из спиц для вязания, состав жидкость под секртеом)))',
-        onclick: 'more2()'
+        name: 'Grove pugalo',
+        description: 'Пугало (англ. Scarecrow) — суперзлодей вселенной DC Comics. В детстве, когда Джонатан Крейн был ещё школьником, над ним издевались все его «знакомые». Однако Крейн обладал развитым умом. В студенческом возрасте он поступил в Готэмский университет на факультет психологии. Вскоре после отличной учёбы в университете Крейн стал профессором Аркхэмской клиники, однако его коллеги обнаружили профессора за опытами, проводимыми над обычными людьми.',
+        material: 'Пвх трубы и шланги, немного бинтов, иглы из спиц для вязания, состав жидкость под секртеом)))'
     },
     {
-        name: 'Mjolnir',
         src: 'img/molot.jpg',
         alt: 'мjolnir',
         src2: 'img/moltor.jpg',
         alt2: 'мjolnir',
-        description: 'Мьёльнир (англ. Mjolnir) — боевой молот Тора. Тор носит молот Мьёльнир, выкованный из металла уру. Молот является практически неразрушимым, как земной металл адамантий, который покрывает скелет Росомахи, и сочетает в себе множество чар, наложенных на него Одином. Орудие может выдержать температуру солнца, взрывы, достаточные для уничтожения планет, и содержит в себе энергию, которой хватит, чтобы уничтожить целую галактику. Мьёльнир также даёт Тору множество способностей, например, управление фундаментальными силами вселенной, такими как электромагнитный спектр, гравитация и т.д .Но судя по обьяснениям Одина, Мльёнир лишь является инструментом, позволяющим контролировать внутреннюю мощь громовержцев.',
-        material: 'Выполнен полностью из дерева, верхушка с надписью сделана на пластике, на рукояти два слоя ткань, мягкая основа и кожзам',
-        onclick: 'more3()'
+        name: 'Mjolnir',
+        description: 'Мьёльнир (англ. Mjolnir) — боевой молот Тора. Тор носит молот Мьёльнир, выкованный из металла уру. Молот является практически неразрушимым, как земной металл адамантий, который покрывает скелет Росомахи, и сочетает в себе множество чар, наложенных на него Одином. Орудие может выдержать температуру солнца, взрывы, достаточные для уничтожения планет, и содержит в себе энергию, которой хватит, чтобы уничтожить целую галактику.',
+        material: 'Выполнен полностью из дерева, верхушка с надписью сделана на пластике, на рукояти два слоя ткань, мягкая основа и кожзам'
     },
     {
-        name: 'Thunder Harley Quinn',
         src: 'img/thunder-hq.png',
         alt: 'thunder Harley Quinn',
         src2: 'img/hq.jpg',
         alt2: 'thunder Harley Quinn',
+        name: 'Thunder <br> Harley Quinn',
         description: 'Харли Квинн, ранее известная как доктор Харлин Ф. Квинзель, — бывший психиатр, ныне одна из противников Бэтмена, ставшая преступницей из-за любви к своему пациенту, психопату-убийце Джокеру. Впервые она появилась в сериале "Batman: The Animated Series", в эпизоде "Услуга Джокеру", где сыграла роль помощницы клоуна-принца. Её прозвище очень похоже по звучанию на слово «арлекин».',
-        material: 'Основа из дерева, молот полностью оклеен в пленку, добавлены элементы декора',
-        onclick: 'more4()'
+        material: 'Основа из дерева, молот полностью оклеен в пленку, добавлены элементы декора'
     },
     {
-        name: 'Katana shinobu kocho',
         src: 'img/katana.jpg',
         alt: 'katana shinobu kocho',
         src2: 'img/schinobu-kocho.jpeg',
         alt2: 'katana shinobu kocho',
+        name: 'Katana  <br> shinobu kocho',
         description: 'Цветок в форме с 4 лепестками; Лепесток имеет ядро цвета морской волны с оранжевой каймой.',
-        material: 'Лезвие из металла, рукоят состовная из дерева и пластика, краска эмаль и лента на рукоятку зеленая 50мм',
-        onclick: 'more5()'
+        material: 'Лезвие из металла, рукоят состовная из дерева и пластика, краска эмаль и лента на рукоятку зеленая 50мм'
     }
 ]
 
@@ -180,60 +161,15 @@ let card;
 
 for (let i = 0; i < cards.length; i++) {
     card = new CardCosplay(
-        cards[i]['name'],
         cards[i]['src'],
         cards[i]['alt'],
         cards[i]['src2'],
         cards[i]['alt2'],
+        cards[i]['name'],
         cards[i]['description'],
         cards[i]['material'],
-        cards[i]['onclick'],
-        '.cosplay__project').createCardCosplay();
+        '.container').createCardCosplay();
 } 
-
-
-let cart = document.querySelector('.card');
-let btnReset = document.querySelectorAll('.input-style');
-let children;
-
-function more() {
-    cart.classList.remove('card');
-    cart.classList.add('big-card');
-
-    cartInput = document.createElement('input');
-    cartInput.classList.add('input-style');
-    cartInput.type = 'button';
-
-    cart.appendChild(cartInput);
-
-    if(cart.classList.contains('big-card')) {
-        cartInput.onclick = function() {
-            cart.classList.add('card');
-            cart.classList.remove('big-card');
-            children = cart.lastChild;
-            cart.removeChild(children);
-        }
-    }
-}
-function regh() {
-    cart.classList.remove('card');
-    cart.classList.add('big-card');
-
-    cartInput = document.createElement('input');
-    cartInput.classList.add('input-style');
-    cartInput.type = 'button';
-
-    cart.appendChild(cartInput);
-
-    if (cart.classList.contains('big-card')) {
-        cartInput.onclick = function () {
-            cart.classList.add('card');
-            cart.classList.remove('big-card');
-            children = cart.lastChild;
-            cart.removeChild(children);
-        }
-    }
-}
 
 class CardInWorkCosplay {
     #_names;
@@ -290,6 +226,10 @@ s
         elems.classList.add('item');
         elems.innerHTML = `
         
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <h3 class="item__title">${this.names}</h3>
         <div class="item__description">
             <img class="item__description__image" src="${this.srcs}" alt="${this.alts}">
@@ -635,27 +575,27 @@ let compressor = document.querySelector('.assistant__power-tool__compressor');
 btnMetall.onclick = function () {
     if (ushm.classList.contains('new-position-four') == false &&
         enraver.classList.contains('new-position-five') == false &&
-        multiTool.classList.contains('new-position') == false &&
-        tocylinder.classList.contains('new-position-two') == false &&
-        compressor.classList.contains('new-position-three') == false) {
+        multiTool.classList.contains('new-position-six') == false &&
+        tocylinder.classList.contains('new-position-seven') == false &&
+        compressor.classList.contains('new-position-eight') == false) {
 
         setTimeout(function () {
             textHidden.classList.add('hidden');
             ushm.classList.add('new-position-four');
-            tocylinder.classList.add('new-position-two');
-            compressor.classList.add('new-position-three');
+            tocylinder.classList.add('new-position-seven');
+            compressor.classList.add('new-position-eight');
             enraver.classList.add('new-position-five');
-            multiTool.classList.add('new-position');
+            multiTool.classList.add('new-position-six');
         }, 100);
     }
     else {
         setTimeout(function () {
             textHidden.classList.remove('hidden');
             ushm.classList.remove('new-position-four');
-            tocylinder.classList.remove('new-position-two');
-            compressor.classList.remove('new-position-three');
+            tocylinder.classList.remove('new-position-seven');
+            compressor.classList.remove('new-position-eight');
             enraver.classList.remove('new-position-five');
-            multiTool.classList.remove('new-position');
+            multiTool.classList.remove('new-position-six');
             ushm.classList.remove('test');
             tocylinder.classList.remove('test');
             compressor.classList.remove('test');
