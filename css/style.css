@@ -51,3 +51,50 @@
 .square-15 {
     background-image: url(../img/svetilnik.jpg);
 }
+
+.image-link {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 400px;
+}
+
+footer .image-youtube {
+    width: 66px;
+    height: 67px;
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+    background-position: -39px -19px;
+    border-radius: 50%;
+}
+
+footer .image-youtube:hover {
+    box-shadow: 0 0 20px yellow;
+}
+
+.image-facebook {
+    width: 66px;
+    height: 67px;
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+    background-position: -456px -19px;
+    border-radius: 50%;
+}
+
+footer .image-facebook:hover {
+    box-shadow: 0 0 20px yellow;
+}
+
+.image-pinterest {
+    width: 66px;
+    height: 67px;
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+    background-position: -289px -102px;
+    border-radius: 50%;
+}
+
+footer .image-pinterest:hover {
+    box-shadow: 0 0 20px yellow;
+}
